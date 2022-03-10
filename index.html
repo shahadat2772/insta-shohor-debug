@@ -95,12 +95,14 @@
         <p class="w-75 mx-auto">
           As JS is a single-threaded, just-in-time compiled, synchronous
           language, it uses a browser's compiler engine to convert the code to
-          the machine level. The compilation process starts (synchronously) from
-          the top of the js script. In the process, all the tasks that have to
-          be executed (synchronously) will stay in the stack, and all the tasks
-          that will be executed asynchronously will stay in the queue section.
-          Now js will run all the tasks in the stack then will start working on
-          the queue section, in the queue section all the tasks will be done
+          the machine level. For each of the lines of code we write,
+          interpreters immediately convert it to machine-level language. The
+          compilation process starts (synchronously) from the top of the js
+          script. In the process, all the tasks that have to be executed
+          (synchronously) will stay in the stack, and all the tasks that will be
+          executed asynchronously will stay in the queue section. Now js will
+          run all the tasks in the stack then will start working on the queue
+          section, in the queue section all the tasks will be done
           synchronously.
         </p>
       </div>
